@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>learnjapanese</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="slide.js"></script>
+    <style>
+        body{
+            text-align: center;
+            margin: 0 auto;
+            float: center;
+        }
+
+    </style>
+
+</head>
+<body>
+<header style="background-color: rgb(68, 121, 170);">
+  <br>
+    <h1 style="font-size: 50px;">Learn Japanese: にほんごをまなぼう</h1>
+    <img src="japan.png" alt="japan" width="30%" class="center">
+    <br>
+    <br>
+</header>
+
+<div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="letters.html">Letters</a>
+    <a href="words.html">Words</a>
+    <a href="phrases.html">Phrases</a>
+    <a href="kanji.html">Kanji</a>
+    <a href="trending.html">Trending words</a>
+    <a href="culture.html">Culture</a>
+    <a href="quiz.html">Quiz</a>
+  </div>
+
+  <br>
+  <div style="width: 700px; border: 3px solid rgb(68, 121, 170); padding: 50px; margin: 0 auto;">
+    <h2>Intro</h2>
+    <p style="width: 70%; margin: 0 auto;">Japanese is a language with three scripts: kanji, hiragana, and katakana. It has a unique grammatical structure with a subject-object-verb word order. Learning Japanese opens the door to understanding not only the language itself, but also Japanese traditions, customs, and values. <br>Let's study Japanese together on this website!</p>
+  </div>
+
+  <br>
+  <div class= "slideshow-container">
+    <div class="mySlides fade" style="display: block;">
+      <div class="numbertext">1 / 4</div>
+      <img st src="homeletters.png" style="width: 100%">
+      <div class="text"> <a href="letters.html" class="link">Click</a> to learn <strong>Japanese letter</strong>!</div>
+  </div>
+
+    <div class= "mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="homephrases.png" style="width: 100%">
+        <div class="text"><a href="phrases.html" class="link">Click</a> to learn <strong>key phrases</strong>!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="hometrending.png" style="width: 100%">
+        <div class="text"><a href="trending.html" class="link">Click</a> to learn <strong>trending words</strong>!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="homeculture.png" style="width: 100%">
+        <div class="text"><a href="culture.html" class="link">Click</a> to learn <strong>Japanese culture</strong>!</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<br>
+<button class="button button2"><a href="kanji.html">Learn <strong>Kanji</strong> (Chinese character)</a></button>
+<button class="button3 button2"><a href="quiz.html">Take <strong>Quiz</strong></a></button>
+<div style="height: 10px"></div>
+
+<div style="background-color:rgba(68, 121, 170, 0.851); margin: 0 auto; width: 700px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+<br><p>How is the website? Give me a feedback!</p>
+
+    <form action="/action_page.php">
+        <label for="fname"><label style="font-size: 14px;">points of improvement</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <br><label style="font-size: 14px;">Did you enjoy the website?</label><br>
+        <input type="checkbox" id="option1" name="option1" value="yes">
+        <label for="option1"> Yes!!!!!</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="very much">
+        <label for="option2"> so much!!</label><br>
+
+        <input type="submit" value="Submit">
+      </form>   
+      <p>Thank you for your feedback!</p>
+    </div>
+
+
+</body>
+</html>
