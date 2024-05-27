@@ -7,6 +7,7 @@ h1{
     text-align: center;
 }
 
+
 * {box-sizing: border-box}
 
 /*スライド用*/
@@ -253,4 +254,94 @@ h1{
     background-color: #ffffff;
   }
 
-  
+  /*トレンド*/
+
+  #flashcards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flashcard {
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flip .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flashcard-front {
+    background-color:rgb(243, 99, 135);
+    color: white;
+}
+
+.flashcard-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+/*漢字*/
+a.kanji:hover, a.kanji:active {font-size: 150%;}
+
+.kanji{
+  background-color: rgb(145, 180, 212);
+  color: black;
+}
+
+
+.kanji:hover{
+  transform: scale(1.2);
+}
+
+/*文化*/
+section{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+

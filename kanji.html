@@ -4,6 +4,7 @@
     <title>learnkanji</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="mouseover.js"></script>
 </head>
 <body>
   <header>
@@ -23,7 +24,7 @@
     <a href="words.html">Words</a>
     <a href="phrases.html">Phrases</a>
     <a href="kanji.html">Kanji</a>
-    <a href="trending.html">Trending words</a>
+    <a href="slang.html">Slang</a>
     <a href="culture.html">Culture</a>
     <a href="quiz.html">Quiz</a>
   </div>
@@ -43,9 +44,9 @@
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">一</th>
-      <td>イチ(ichi),イツ(itsu)<br>ひと(hito)、ひとつ(hitotsu)</td>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">二</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">一</th>
+      <td>イチ(ichi)、イツ(itsu)<br>ひと(hito)、ひとつ(hitotsu)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">二</th>
       <td>ニ(ni)、 ジ(ji)<br>ふた(futa)、ふたつ(futatsu)</td>
     </tr>
     <tr>
@@ -54,203 +55,439 @@
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">三</th>
-      <td>サン(sans)<br>み(mi)みつ(mitsu)みっつ(mittsu)</td>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">四</th>
-      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">三</th>
+      <td>サン(sans)<br>み(mi)、みつ(mitsu)、みっつ(mittsu)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">四</th>
+      <td>シ(shi)<br>よ(yo)、よん(yon)、よっつ(yottsu)</td>
     </tr>
     <tr>
       <td>three</td>
-      <td></td>
+      <td>four</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">五</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">六</th>
-      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">五</th>
+      <td>ゴ(go)<br>いつ(itsu)、いつつ(itsutsu)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">六</th>
+      <td>ロク(roku)<br>む(mu)、むっつ(muttsu)</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>five</td>
+      <td>six</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">七</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">八</th>
-      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">七</th>
+      <td>シチ(shichi)<br>なな(nana)、ななつ(nanatsu)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">八</th>
+      <td>ハチ(hachi)<br>や(ya)、やっつ(yattsu)、よう(you)</td>
+    </tr>
+    <tr>
+      <td>seven</td>
+      <td>eight</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">九</th>
+      <td>キュウ(kyu)、ク(ku)<br>ここの(kokono)、ここのつ(kokonotsu)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">十</th>
+      <td>ジュウ(ju)<br>とお(too)、と(to)</td>
+    </tr>
+    <tr>
+      <td>nine</td>
+      <td>ten</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">百</th>
+      <td>ヒャク(hyaku)<br>もも(momo)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">千</th>
+      <td>セン(sen)<br>ち(chi)</td>
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>hundred</td>
+      <td>thousand</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">九</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">十</th>
-      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">日</th>
+      <td>ニチ(nichi)、ジツ(jitsu)<br>ひ(hi)、か(ka)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">月</th>
+      <td>ゲツ(getsu)、ガツ(gatsu)<br>つき(tsuki)</td>
+    </tr>
+    <tr>
+      <td>day/sunlight/Sunday</td>
+      <td>moon/month/Monday</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">火</th>
+      <td>カ(ka)<br>ひ(hi)、ほ(ho)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">水</th>
+      <td>スイ(sui)<br>みず(mizu)</td>
+    </tr>
+    <tr>
+      <td>fire/Tuesday</td>
+      <td>water/Wednesday</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">木</th>
+      <td>ボク(boku)、モク(moku)<br>き(ki)、こ(ko)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">金</th>
+      <td>キン(kin)、コン(kon)<br>かね(kane)、こがね(kogane)</td>
+    </tr>
+    <tr>
+      <td>tree/Thursday</td>
+      <td>money/gold/Friday</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">土</th>
+      <td>ド(do)、ト(to)<br>つち(tsuchi)
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">田</th>
+      <td>デン(den)<br>た(ta)</td>
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>soil/Saturday</td>
+      <td>rice field</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">百</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">千</th>
-      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">山</th>
+      <td>サン(san)、セン(sen)<br>やま(yama)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">川</th>
+      <td>セン(sen)<br>かわ(kawa)</td>
+    </tr>
+    <tr>
+      <td>mountain</td>
+      <td>river</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">林</th>
+      <td>リン(rin)<br>はやし(hayashi)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">森</th>
+      <td>シン(shin)<br>もり(mori)</td>
+    </tr>
+    <tr>
+      <td>woods</td>
+      <td>forest</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">石</th>
+      <td>セキ(seki)<br>いし(ishi)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">天</th>
+      <td>テン(ten)<br>あめ(ame)、あま(ama)、そら(sora)</td>
+    </tr>
+    <tr>
+      <td>stone</td>
+      <td>sky/heaven</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">気</th>
+      <td>キ(ki)、ケ(ke)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">空</th>
+      <td>クウ(ku)<br>そら(sora)、から(kara)、あく(aku)、すく(suku)</td>
+    </tr>
+    <tr>
+      <td>feeling/atmosphere</td>
+      <td>sky/empty</td>
+    </tr>
+
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">雨</th>
+      <td>ウ(u)<br>あめ(ame)、あま(ama)
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">夕</th>
+      <td>セキ(seki)<br>ゆう(yu)、ゆうべ(yube)</td>
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>rain</td>
+      <td>evening</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">日</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">月</th>
-      <td></td>
-      </td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">草</th>
+      <td>ソウ(sou)、くさ(kusa)
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">花</th>
+      <td>カ(ka)<br>はな(hana)</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>grass</td>
+      <td>flower</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">火</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">水</th>
-      <td></td>
-      </td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">竹</th>
+      <td>チク(chiku)たけ(take)</td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">文</th>
+      <td>ブン(bun)、フン(fun)<br>ふみ(fumi)、あや(aya)</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>bamboo</td>
+      <td>writing</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">木</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">金</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">字</th>
       <td></td>
-      </td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">本</th>
+      <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>letter</td>
+      <td>book/sentence</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">土</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">田</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">円</th>
       <td></td>
-      </td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">玉</th>
+      <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>circle/yen</td>
+      <td>ball/coin</td>
     </tr>
 
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">山</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">川</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">年</th>
       <td></td>
-      </td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">音</th>
+      <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>year/age</td>
+      <td>sound</td>
     </tr>
-
+    
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">林</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">森</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">学</th>
       <td></td>
-      </td>
-    </tr>
-    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">校</th>
       <td></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">石</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">天</th>
-      <td></td>
-      </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>learning</td>
+      <td>school</td>
     </tr>
-
+    
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">気</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">空</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">先</th>
       <td></td>
-      </td>
-    </tr>
-    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">生</th>
       <td></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">雨</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">夕</th>
-      <td></td>
-      </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>ahead/destination</td>
+      <td>life/birth/student</td>
     </tr>
-
+    
     <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2">草</th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2">花</th>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">赤</th>
       <td></td>
-      </td>
-    </tr>
-    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">白</th>
       <td></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <th style="font-size: 100px; text-align: center;" rowspan="2"></th>
-      <td>(hitotsu)
-      <th style="font-size: 100px; text-align: center;" rowspan="2"></th>
-      <td></td>
-      </td>
     </tr>
     <tr>
+      <td>red</td>
+      <td>white</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">青</th>
       <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">人</th>
       <td></td>
     </tr>
-
-
-
+    <tr>
+      <td>blue</td>
+      <td>person</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">男</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">女</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>male</td>
+      <td>female</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">子</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">目</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>children</td>
+      <td>eye</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">耳</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">口</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ear</td>
+      <td>mouth</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">手</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">足</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>hand</td>
+      <td>leg/foot</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">犬</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">貝</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>dog</td>
+      <td>shell</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">虫</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">王</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>insect</td>
+      <td>king</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">力</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">町</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>power</td>
+      <td>town</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">村</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">車</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>village</td>
+      <td>car</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">大</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">中</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>big</td>
+      <td>middle</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">小</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">上</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>up</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">下</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">左</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>down</td>
+      <td>left</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">右</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">正</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td>correct/right</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">出</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">入</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>exit</td>
+      <td>enter</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">立</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">見</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>stand</td>
+      <td>look</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">休</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">早</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>body</td>
+      <td>quick</td>
+    </tr>
+    
+    <tr>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">名</th>
+      <td></td>
+      <th style="font-size: 100px; text-align: center;" rowspan="2" class="kanji">糸</th>
+      <td></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+    </tr>
 
   </table>
-
-  <div>
-
 </div>
-  </body>
+</body>
 </html>
 
