@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const words = [
         { word: 'まじ', romaji: 'maji', meaning: '  meaning: really' },
-        { word: 'やばい', romaji: 'yabai', meaning: 'meaning: incredible' },
+        { word: 'やばい', romaji: 'yabai', meaning: 'meaning: insane' },
         { word: 'えぐい', romaji: 'egui', meaning: 'meaning: harsh' },
         { word: 'ださい', romaji: 'dasai', meaning: 'meaning: uncool' },
         { word: 'がち', romaji: 'gachi', meaning: 'meaning: serious' },

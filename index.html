@@ -14,7 +14,9 @@
     </style>
 
 </head>
+
 <body>
+
 <header style="background-color: rgb(68, 121, 170);">
   <br>
     <h1 style="font-size: 50px;">Learn Japanese: にほんごをまなぼう</h1>
@@ -22,6 +24,7 @@
     <br>
     <br>
 </header>
+
 
 <div class="topnav">
     <a class="active" href="index.html">Home</a>
@@ -34,13 +37,8 @@
     <a href="quiz.html">Quiz</a>
   </div>
 
-  <br>
-  <div style="width: 700px; border: 3px solid rgb(68, 121, 170); padding: 50px; margin: 0 auto;">
-    <h2>Intro</h2>
-    <p style="width: 70%; margin: 0 auto;">Japanese is a language with three scripts: kanji, hiragana, and katakana. It has a unique grammatical structure with a subject-object-verb word order. Learning Japanese opens the door to understanding not only the language itself, but also Japanese traditions, customs, and values. <br>Let's study Japanese together on this website!</p>
-  </div>
+  <br><br>
 
-  <br>
   <div class= "slideshow-container">
     <div class="mySlides fade" style="display: block;">
       <div class="numbertext">1 / 4</div>
@@ -82,11 +80,16 @@
 <button class="button button2"><a href="kanji.html">Learn <strong>Kanji</strong> (Chinese character)</a></button>
 <button class="button3 button2"><a href="quiz.html">Take <strong>Quiz</strong></a></button>
 <div style="height: 10px"></div>
+<br><br>
 
-<div style="margin: 0 auto; width: 700px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YV8KmfBbBM?si=ch3ZJDNGgTkt9aQ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        
+</iframe>
+<br><br>
+<div style="margin: 0 auto; width: 100%; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(37, 37, 37); color: white;">
 <br><p>How is the website? Give me feedback!</p>
 
-    <form action="/action_page.php">
+    <form>
         <label for="fname"><label style="font-size: 14px;">points of improvement</label><br>
         <input type="text" id="fname" name="fname"><br>
 
@@ -96,12 +99,13 @@
         <input type="checkbox" id="vehicle2" name="vehicle2" value="very much">
         <label for="option2"> so much!!</label><br>
 
-        <input type="submit" value="Submit">
+        <button onclick="myFunction()">Submit</button>
       </form>   
-      <p>Thank you for your feedback!</p>
+      <script>
+        function myFunction() {
+          alert("Thank you for your feedback!");
+        }
+        </script>
+    
+      <br><br>
     </div>
-    <br><br>
-
-</body>
-<script src="gallery.js"></script>
-</html>

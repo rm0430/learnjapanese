@@ -4,7 +4,7 @@
     <title>checkskills</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="quiz.js"></script>
+    
 </head>
 <body>
   <header>
@@ -15,7 +15,7 @@
       <br>
   </header>
   
-  <br>
+
 <body>
 
   <div class="topnav">
@@ -29,40 +29,21 @@
     <a href="quiz.html">Quiz</a>
   </div>
 
-<main class="outerblock">
-    <div class="quiz">
-        <div class="inner-block">
-            <div class="quiz conent"></div>
-        </div>
+  
+  <div class="quiz">
+    <div id="question-container" class="containerr hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="button-grid"></div>
     </div>
-    <div class="quiz-question-number">No.1</div>
-    <h2 class="quiz-question">//write question here</h2>
-    <li>
-        <label class="quiz-button button01">
-            <input name="radio" type="radio" value=" ">
-            <span name="quiz text01">//answer</span>
-        </label>
-    </li>
-    <li>
-        <label class="quiz-button button02">
-            <input name="radio" type="radio" value=" ">
-            <span name="quiz text02">//answer</span>
-        </label>
-    </li>
-    <li>
-        <label class="quiz-button button03">
-            <input name="radio" type="radio" value=" ">
-            <span name="quiz text03">//answer</span>
-        </label>
-    </li>
-    <li>
-        <label class="quiz-button button04">
-            <input name="radio" type="radio" value=" ">
-            <span name="quiz text04">//answer</span>
-        </label>
-    </li>
-</main>
+
+    <br>
+    <div class="control">
+        <button id="startbutton" class="startbutton btn">Start</button>
+        <button id="nextbutton" class="nextbutton hide btn">Next</button>
+    </div>
+  </div>
 
 
+<script src="quiz.js"></script>
 </body>
 <html>
