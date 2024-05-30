@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
          /*Kanji*/
         {
-         question: 'What does 雨 mean?',
+         question: 'What does 雨(ame) mean?',
          answers: [
              { text: 'sky', correct: false },
              { text: 'moon', correct: false },
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does 耳 mean?',
+         question: 'What does 耳(mimi) mean?',
          answers: [
              { text: 'ear', correct: true },
              { text: 'female', correct: false },
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does 糸 mean?',
+         question: 'What does 糸(ito) mean?',
          answers: [
              { text: 'look', correct: false },
              { text: 'children', correct: false },
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
          /*slang*/
-         question: 'What does やばい mean?',
+         question: 'What does やばい(yabai) mean?',
          answers: [
              { text: 'insane', correct: true },
              { text: 'annoying', correct: false },
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does うける mean?',
+         question: 'What does うける(ukeru) mean?',
          answers: [
              { text: 'popular', correct: false },
              { text: 'gross', correct: false },
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does ぴえん mean?',
+         question: 'What does ぴえん(pien) mean?',
          answers: [
              { text: 'sad', correct: true },
              { text: 'irritating', correct: false },
