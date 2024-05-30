@@ -1,4 +1,3 @@
-/*container を ccontainer に変える*/
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startbutton');
     const nextButton = document.getElementById('nextbutton');
@@ -6,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionElement = document.getElementById('question');
     const answerButtonElement = document.getElementById('answer-buttons');
 
-    let shuffledQuestions, currentQuestionIndex;
+    let currentQuestionIndex = 0;
+    let score = 0;
 
     startButton.addEventListener('click', startGame);
     nextButton.addEventListener('click', () => {
@@ -15,21 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function startGame() {
-        console.log('Game started');
-        startButton.classList.add('hide');
-        shuffledQuestions = questions.sort(() => Math.random() - 0.5);
         currentQuestionIndex = 0;
+        score = 0;
+        startButton.classList.add('hide');
+        nextButton.innerHTML = "Next";
         questionContainerElement.classList.remove('hide');
         setNextQuestion();
     }
 
     function setNextQuestion() {
         resetState();
-        showQuestions(shuffledQuestions[currentQuestionIndex]);
+        showQuestions(questions[currentQuestionIndex]);
     }
 
     function showQuestions(question) {
-        console.log('Showing question:', question);
         questionElement.innerText = question.question;
         question.answers.forEach(answer => {
             const button = document.createElement('button');
@@ -48,20 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
         while (answerButtonElement.firstChild) {
             answerButtonElement.removeChild(answerButtonElement.firstChild);
         }
+        clearStatusClass(document.body);
     }
 
     function selectAnswer(e) {
         const selectedButton = e.target;
         const correct = selectedButton.dataset.correct === 'true';
+        if (correct) score++;
         setStatusClass(document.body, correct);
         Array.from(answerButtonElement.children).forEach(button => {
             setStatusClass(button, button.dataset.correct === 'true');
         });
-        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        if (questions.length > currentQuestionIndex + 1) {
             nextButton.classList.remove('hide');
         } else {
-            startButton.innerText = 'Restart';
-            startButton.classList.remove('hide');
+            showScore();
         }
     }
 
@@ -79,17 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('wrong');
     }
 
+    function showScore() {
+        resetState();
+        questionElement.innerHTML = `You scored ${score} out of ${questions.length}! Good Job:) <br>This is a <a href="specialwebsite.html">special website</a> for you.`;
+        nextButton.innerHTML = "Play again";
+        nextButton.classList.remove('hide');
+        nextButton.removeEventListener('click', setNextQuestion);
+        nextButton.addEventListener('click', startGame, { once: true });
+    }
+
     const questions = [
-        {
-            /*hiragana*/
-            question: 'What is the sound of え?',
-            answers: [
-                { text: 'e', correct: false },
-                { text: 'u', correct: false },
-                { text: 'a', correct: true },
-                { text: 'i', correct: false }
-            ]
-        },
         {
             question: 'What is the sound of を?',
             answers: [
@@ -97,15 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'ni', correct: false },
                 { text: 'su', correct: false },
                 { text: 'wo', correct: true }
-            ]
-        },
-        {
-            question: 'What is the sound of ひ?',
-            answers: [
-                { text: 'hi', correct: true },
-                { text: 'ka', correct: false },
-                { text: 'n', correct: false },
-                { text: 'te', correct: false }
             ]
         },
         {
@@ -117,43 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'ku', correct: false }
             ]
         },
-        {
-            question: 'What is the sound of け?',
-            answers: [
-                { text: 'ku', correct: true },
-                { text: 'ke', correct: false },
-                { text: 'so', correct: false },
-                { text: 'ni', correct: false }
-            ]
-        },
+
          /*katakana*/
-         {
-         question: 'What is the sound of ノ?',
-         answers: [
-             { text: 'no', correct: true },
-             { text: 'ru', correct: false },
-             { text: 'si', correct: false },
-             { text: 'ha', correct: false }
-         ]
-        },
-        {
-         question: 'What is the sound of ン?',
-         answers: [
-             { text: 'i', correct: false },
-             { text: 'o', correct: false },
-             { text: 'n', correct: true },
-             { text: 'so', correct: false }
-         ]
-        },
-        {
-         question: 'What is the sound of フ?',
-         answers: [
-             { text: 'nu', correct: false },
-             { text: 'wo', correct: false },
-             { text: 'ka', correct: false },
-             { text: 'fu', correct: true }
-         ]
-        },
         {
          question: 'What is the sound of ヨ?',
          answers: [
@@ -192,48 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What 今年(ことし) does mean?',
-         answers: [
-             { text: 'today', correct: false },
-             { text: 'this year', correct: true },
-             { text: 'Friday', correct: false },
-             { text: 'tomorrow', correct: false }
-         ]
-        },
-        {
          question: 'What does 警察署(keisatsusho) mean?',
          answers: [
              { text: 'post office', correct: false },
              { text: 'reception', correct: false },
              { text: 'police office', correct: true },
              { text: 'hospital', correct: false }
-         ]
-        },
-        {
-         question: 'What does 紫(murasaki) mean?',
-         answers: [
-             { text: 'yellow', correct: false },
-             { text: 'red', correct: false },
-             { text: 'green', correct: false },
-             { text: 'purple', correct: true }
-         ]
-        },
-        {
-         question: 'What is younger sister in Japanese?',
-         answers: [
-             { text: '妹(immouto)', correct: true },
-             { text: '彼女(kanojo)', correct: false },
-             { text: '大人(otona)', correct: false },
-             { text: '弟(otouto)', correct: false }
-         ]
-        },
-        {
-         question: 'What is cheese in Japanese??',
-         answers: [
-             { text: 'コーヒー(ko0hi)', correct: false },
-             { text: 'チーズ(cheezu)', correct: true },
-             { text: '卵(tamago)', correct: false },
-             { text: 'ご飯(gohan)', correct: false }
          ]
         },
         {
@@ -323,19 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
-        
-
-
-        {
          /*phrase*/
-         question: 'What does こんにちは mean?',
-         answers: [
-             { text: 'Thank you', correct: false },
-             { text: 'Good morning', correct: false },
-             { text: 'Hello', correct: true },
-             { text: 'Sorry', correct: false }
-         ]
-        },
         {
          question: 'What does 〜から来ました mean?',
          answers: [
@@ -373,15 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'How to say "Please" in Japanese?',
-         answers: [
-             { text: 'ありがとうございます(arigato gozaimasu)', correct: false },
-             { text: 'お願いします(onegai shimasu)', correct: true },
-             { text: 'わかりません(wakarimasen)', correct: false },
-             { text: 'おはようございます(ohayo gozaimasu)', correct: true }
-         ]
-        },
-        {
          question: 'How to say "I don’t understand" in Japanese?',
          answers: [
              { text: 'すみません(sumimasen)', correct: false },
@@ -400,20 +298,11 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         
-        {
          /*Kanji*/
-         question: 'What does 土 mean?',
-         answers: [
-             { text: 'soil', correct: true },
-             { text: 'woods', correct: false },
-             { text: 'river', correct: false },
-             { text: 'fire', correct: false }
-         ]
-        },
         {
          question: 'What does 雨 mean?',
          answers: [
-             { text: 'sky', correct: true },
+             { text: 'sky', correct: false },
              { text: 'moon', correct: false },
              { text: 'rain', correct: true },
              { text: 'stone', correct: false }
@@ -426,15 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
              { text: 'female', correct: false },
              { text: 'gold', correct: false },
              { text: 'eye', correct: false }
-         ]
-        },
-        {
-         question: 'What does 車 mean?',
-         answers: [
-             { text: 'dog', correct: false },
-             { text: 'car', correct: true },
-             { text: 'small', correct: false },
-             { text: 'exit', correct: false }
          ]
         },
         {
@@ -466,31 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does くさ mean?',
-         answers: [
-             { text: 'annoying', correct: false },
-             { text: 'funny', correct: true },
-             { text: 'serious', correct: false },
-             { text: 'sad', correct: false }
-         ]
-        },
-        {
          question: 'What does ぴえん mean?',
          answers: [
              { text: 'sad', correct: true },
              { text: 'irritating', correct: false },
              { text: 'really', correct: false },
              { text: 'super', correct: false }
-         ]
-        },
-
-        {
-         question: 'What does えもい mean?',
-         answers: [
-             { text: 'get angry', correct: false },
-             { text: 'harash', correct: false },
-             { text: 'moved', correct: true },
-             { text: 'uncool', correct: false }
          ]
         },
     ];
