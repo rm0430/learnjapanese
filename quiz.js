@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
          /*phrase*/
         {
-         question: 'What does 〜から来ました mean?',
+         question: 'What does 〜から来ました(~kara kimashita) mean?',
          answers: [
              { text: 'What is your name?', correct: false },
              { text: 'My name is〜', correct: false },
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
         },
         {
-         question: 'What does すみません mean?',
+         question: 'What does すみません(sumimasen) mean?',
          answers: [
              { text: 'Excuse me/Sorry', correct: true },
              { text: 'I don’t understand', correct: false },
